@@ -82,8 +82,7 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(tatlar){
-  let ekle1 = 'Kakule';
+function cesitEkle(tatlar,ekle1){
   tatlar.unshift(ekle1);
   return tatlar;
 } 
@@ -125,7 +124,7 @@ function indekstekiCesitiGetir(tatlar, sayi1){
 }
 
 indekstekiCesitiGetir(orijinalTatlar, 4);
-
+console.log(indekstekiCesitiGetir(orijinalTatlar, 4));
 
 /* Görev 6:
 
@@ -172,6 +171,7 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 
 
 function ismeGoreFiltrele(){
+  
 }
 
 /* ALIŞTIRMA */
@@ -186,9 +186,20 @@ Aşağıdakileri yapmak için ortalamaKelimeSayisi işlevini kullanın:
    Örneğin: ortalamaKelimeSayisi(orijinalTatlar) 0 ile 2 arasında bir sayı döndürmelidir.
 */
 
-function ortalamaKelimeSayisi(/*kod buraya*/){
-  /*kod buraya*/
+function ortalamaKelimeSayisi(ortalamaDizi) {
+  let kelime_sayisi = 0;
+  const ortalamaDiziLength = ortalamaDizi.length;
+  for (let i = 0; i < ortalamaDiziLength; i++) {
+    kelime_sayisi += ortalamaDizi[i].split(" ").length;
+  }
+  return kelime_sayisi / ortalamaDiziLength;
 }
+
+console.log("Deneme", ortalamaKelimeSayisi(orijinalTatlar));
+console.log(
+  "Deneme 2",
+  ortalamaKelimeSayisi(["asf dsa", "aa sfdsa", "fasfda"])
+);
 
 
 /* ALIŞTIRMA 2:
