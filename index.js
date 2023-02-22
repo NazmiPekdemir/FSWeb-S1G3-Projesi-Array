@@ -170,9 +170,33 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(){
-  
+function ismeGoreFiltrele(tatlar,filtre){
+  let yeniDizi = [];
+  const tatlarUzunluk = tatlar.length
+  for( let i = 0 ; i < tatlarUzunluk ; i++  ) {
+    let elimdekiTat = tatlar[i];
+    if (elimdekiTat.includes(filtre)) {
+      yeniDizi.push(elimdekiTat);
+    } 
+  }
+  console.log("Yeni Dizi = " , yeniDizi);
+  return(yeniDizi);
 }
+console.log(ismeGoreFiltrele(orijinalTatlar,"A"));
+
+/*
+function ismeGoreFiltrele(tatlar, filtrelenecek) {
+  let sepet = [];
+  for (let i = 0; i < tatlar.length; i++) {
+    let elimdekiAbur = tatlar[i];
+    if (elimdekiAbur.includes(filtrelenecek)) {
+      sepet.push(elimdekiAbur);
+    }
+  }
+  console.log("Sepet", sepet);
+  return sepet;
+} 
+*/
 
 /* ALIŞTIRMA */
 
