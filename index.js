@@ -234,6 +234,7 @@ Aşağıdakileri yapmak için rastgeleTatlar işlevini ve yeni dizileri kullanı
   Örneğin: rastgeleTatlar(orijinalTatlar, yeniTatlar, mevsimlikTatlar, bolgeselTatlar) çalıştırıldığında ["Kestane", "Ballı Badem,"..."Hindistan Cevizi", "Kuru üzüm"].
 */
 
+// !!!!!!!!!!!!!!!! BU SORUNUN ÇÖZÜMÜ AŞAĞIDAKİ DİZİLERDEN SONRA BAŞLIYOR !!!!!!!!!!!!!!!!!!!!!
 
 //NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const yeniTatlar = [
