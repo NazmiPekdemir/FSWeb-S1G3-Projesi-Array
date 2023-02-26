@@ -210,20 +210,16 @@ Aşağıdakileri yapmak için ortalamaKelimeSayisi işlevini kullanın:
    Örneğin: ortalamaKelimeSayisi(orijinalTatlar) 0 ile 2 arasında bir sayı döndürmelidir.
 */
 
-function ortalamaKelimeSayisi(ortalamaDizi) {
-  let kelime_sayisi = 0;
-  const ortalamaDiziLength = ortalamaDizi.length;
-  for (let i = 0; i < ortalamaDiziLength; i++) {
-    kelime_sayisi += ortalamaDizi[i].split(" ").length;
+function ortalamaKelimeSayisi(newArray){
+  let toplamkelime=0;
+  let diziuzunluğu = newArray.length;
+  for(let i = 0; i<newArray.length; i++){
+    toplamkelime += newArray[i].split(" ").length;
   }
-  return kelime_sayisi / ortalamaDiziLength;
+   return toplamkelime / diziuzunluğu;
+  
 }
-
-console.log("Deneme", ortalamaKelimeSayisi(orijinalTatlar));
-console.log(
-  "Deneme 2",
-  ortalamaKelimeSayisi(["asf dsa", "aa sfdsa", "fasfda"])
-);
+console.log(ortalamaKelimeSayisi(orijinalTatlar));
 
 
 /* ALIŞTIRMA 2:
@@ -239,47 +235,56 @@ Aşağıdakileri yapmak için rastgeleTatlar işlevini ve yeni dizileri kullanı
 */
 
 
-function rastgeleTatlar(/*kod buraya*/){
-  /*kod buraya*/
+//NEW DATA ARRAYS FOR STRETCH 2 ⬇️
+const yeniTatlar = [
+  "Badem",
+  "Ballı Badem",
+  "Fıstık Ezmesi",
+  "Profiterol",
+  "Madlen Çikolata"
+]
+
+const mevsimlikTatlar = [
+"Pekan",
+"Kaju",
+"Çikolatalı Mousse",
+"Fransız Vanilyası",
+"Yumurta",
+"Alman çikolatası",
+"Kek üzerine krema",
+"Hindistan Cevizi",
+"Kaymaklı Biskuvi",
+"Beyaz Çikolata",
+"Mango"
+]
+
+const bolgeselTatlar = [
+"Kaymak",
+"Karpuz",
+"Karadut",
+"Turunç",
+"Portakal",
+"Yogurt",
+"Krem Peynir",
+"Kakao",
+"Karamel macchiato",
+"Kuru üzüm",
+"Peynir",
+"Karamel"
+]
+
+
+function rastgeleTatlar(dizi1, dizi2, dizi3, dizi4){
+  let yenidizi =[];
+  let toplamdizi = [...dizi1, ...dizi2, ...dizi3, ...dizi4];
+  
+      for (let i = 0; i < 25; i++) {
+  yenidizi.push(toplamdizi[Math.round(Math.random() * toplamdizi.length)]);
+         
+  }
+   return (yenidizi);
 }
-
-// NEW DATA ARRAYS FOR STRETCH 2 ⬇️
-// const yeniTatlar = [
-//   "Badem",
-//   "Ballı Badem",
-//   "Fıstık Ezmesi",
-//   "Profiterol",
-//   "Madlen Çikolata"
-// ]
-
-// const mevsimlikTatlar = [
-// "Pekan",
-// "Kaju",
-// "Çikolatalı Mousse",
-// "Fransız Vanilyası",
-// "Yumurta",
-// "Alman çikolatası",
-// "Kek üzerine krema",
-// "Hindistan Cevizi",
-// "Kaymaklı Biskuvi",
-// "Beyaz Çikolata",
-// "Mango"
-// ]
-
-// const bolgeselTatlar = [
-// "Kaymak",
-// "Karpuz",
-// "Karadut",
-// "Turunç",
-// "Portakal",
-// "Yogurt",
-// "Krem Peynir",
-// "Kakao",
-// "Karamel macchiato",
-// "Kuru üzüm",
-// "Peynir",
-// "Karamel"
-// ]
+console.log(rastgeleTatlar(orijinalTatlar, yeniTatlar, mevsimlikTatlar, bolgeselTatlar))
 
 
 /* Lütfen bu satırın altındaki hiçbir şeyi değiştirmeyin */
